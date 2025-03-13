@@ -14,7 +14,7 @@ CHANNEL_ID = '-1002367290757'  # Replace with your specific channel or group ID
 # Initialize the bot
 bot = telebot.TeleBot(TOKEN)
 thread_count = 500
-packet_size = 10
+packet_size = 12
 # Dictionary to track user attack counts, cooldowns, photo feedbacks, and bans
 user_attacks = {}
 user_cooldowns = {}
