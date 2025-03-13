@@ -8,13 +8,13 @@ from datetime import datetime, timedelta, timezone
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
 # Telegram bot token and channel ID
-TOKEN = '7274723113:AAGwoOFTU0TyiWQckrr3vdVKTOEjCd-5qC8'  # Replace with your actual bot token
+TOKEN = '7274723113:AAEZum7hH5AIWsVOMGiqiEFUTwtulwCpP24'  # Replace with your actual bot token
 ADMIN_IDS = [1908670857]  # Added new admin ID
 CHANNEL_ID = '-1002367290757'  # Replace with your specific channel or group ID
 # Initialize the bot
 bot = telebot.TeleBot(TOKEN)
 thread_count = 500
-packet_size = 12
+packet_size = 10
 # Dictionary to track user attack counts, cooldowns, photo feedbacks, and bans
 user_attacks = {}
 user_cooldowns = {}
@@ -269,7 +269,7 @@ def bgmi_command(message):
             user_cooldowns[user_id] = datetime.now() + timedelta(seconds=COOLDOWN_DURATION)
 
         # Notify that the attack will run for the default duration of 150 seconds, but display the input duration
-        default_duration = 150
+        default_duration = 120
         
         remaining_attacks = DAILY_ATTACK_LIMIT - user_attacks.get(user_id, 0)
         
